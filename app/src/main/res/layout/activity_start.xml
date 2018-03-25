@@ -7,12 +7,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.sheryl.deerdetection.home">
 
-    <VideoView
-        android:id="@+id/display"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:opencv="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/HelloOpenCvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/HelloOpenCvView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            opencv:camera_id="any"
+            opencv:show_fps="true" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
